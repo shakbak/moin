@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/1a26fc71f5.js"></script>
     <link rel="stylesheet" href="css/reg.css">
     <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
@@ -31,6 +32,7 @@
                   <li><a href="index.html" class="nav-link">Home</a></li>
                   <li><a href="blog.html" class="nav-link">Blog</a></li>
                   <li><a href="contact.html" class="nav-link">Contact</a></li>
+                  <i class="fa fa-refresh" aria-hidden="true"></i>
                 </ul>
               </nav>
             </div>
@@ -47,11 +49,13 @@
     
                 <div class="form-group">
                 <label for="phonenumber"><span class="req">* </span> Phone Number: </label>
+                 <i class="fa fa-phone" aria-hidden="true"></i>
                         <input required type="text" name="phonenumber" id="phone" class="form-control phone" maxlength="28" onkeyup="validatephone(this);" placeholder="Write Your number "/> 
                 </div>
     
                 <div class="form-group"> 	 
                     <label for="firstname"><span class="req">* </span> First name: </label>
+                     
                         <input class="form-control" type="text" name="firstname" id = "txt" onkeyup = "Validate(this)" required /> 
                             <div id="errFirst"></div>    
                 </div>
@@ -61,15 +65,42 @@
                         <input class="form-control" type="text" name="lastname" id = "txt" onkeyup = "Validate(this)" placeholder="hyphen or single quote is OK" required />  
                             <div id="errLast"></div>
                 </div>
+                      <div class="form-group">
+                        <label for="status"><span class="req">* </span> Status: </label> 
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                          <label class="form-check-label" for="gridRadios1">
+                            single
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                          <label class="form-check-label" for="gridRadios2">
+                            Married
+                          </label>
+                        </div>
+                      </div>
+                        
+                      <div class="form-group">
+                        <select class="custom-select">
+                            <option selected>Select Your Age </option>
+                            <option value="1">1-21</option>
+                            <option value="2">22-52</option>
+                            <option value="3">53-99</option>
+                          </select>
+                      </div>
     
                 <div class="form-group">
                     <label for="email"><span class="req">* </span> Email Address: </label> 
+                       <i class="fa fa-at" aria-hidden="true"></i>
+                       <i class="fa fa-envelope" aria-hidden="true"></i>
                         <input class="form-control" required type="text" name="email" id = "email"  onchange="email_validate(this.value);" />   
                             <div class="status" id="status"></div>
                 </div>
     
                 <div class="form-group">
-                    <label for="username"><span class="req">* </span> User name:  <small>This will be your login user name</small> </label> 
+                    <label for="username"><span class="req">* </span> User name:  <small>This will be your login user name</small> </label>
+                        <i class="fa fa-user" aria-hidden="true"></i> 
                         <input class="form-control" type="text" name="username" id = "txt" onkeyup = "Validate(this)" placeholder="minimum 6 letters" required />  
                             <div id="errLast"></div>
                 </div>
@@ -77,7 +108,7 @@
                 <div class="form-group">
                     <label for="password"><span class="req">* </span> Password: </label>
                         <input required name="password" type="password" class="form-control inputpass" minlength="4" maxlength="16"  id="pass1" /> </p>
-    
+                        <i class="fa fa-check" aria-hidden="true"></i>
                     <label for="password"><span class="req">* </span> Password Confirm: </label>
                         <input required name="password" type="password" class="form-control inputpass" minlength="4" maxlength="16" placeholder="Enter again to validate"  id="pass2" onkeyup="checkPass(); return false;" />
                             <span id="confirmMessage" class="confirmMessage"></span>
@@ -85,7 +116,7 @@
     
                 <div class="form-group">
                 
-                    <?php //$date_entered = date('m/d/Y H:i:s'); ?>
+                    
                     <input type="hidden" value="<?php //echo $date_entered; ?>" name="dateregistered">
                     <input type="hidden" value="0" name="activate" />
                     <hr>
@@ -95,9 +126,11 @@
     
                 <div class="form-group">
                     <input class="btn btn-success" type="submit" name="submit_reg" value="Register">
+                    <i class="fa fa-registered" aria-hidden="true"></i>
                 </div>
                           <h5>You will receive an email for validation process. </h5>
                           <h5>Be sure to check your spam folders. </h5>
+                          <i class="fa fa-copyright" aria-hidden="true"></i>
      
     
                 </fieldset>
